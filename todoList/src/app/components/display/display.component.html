@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <h3>代办清单</h3>
+  <ul style="list-style:none;">
+    <li *ngFor="let item of todo;let i=index">
+      <input type="checkbox" (click)="overadd(i)">&nbsp;&nbsp;&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;&nbsp;
+      <button (click)="del(i)">删除</button>
+    </li>
+  </ul>
+  <h3>已完成清单</h3>
+  <ul style="list-style:none;">
+    <li *ngFor="let item of over;let i=index">
+        <input type="checkbox" checked (click)="overaddto(i)">&nbsp;&nbsp;&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="delto(i)">删除</button>
+    </li>
+  </ul>
+</div>
